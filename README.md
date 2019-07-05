@@ -20,10 +20,10 @@ import { mapState } from 'vuex'
 ```
 2.　script部のcomputedで、以下の様に記述するとvuexの値を利用できる
 ```
-    ...mapState({
-      progressRate: state => state.progressRate,
-      loadState: state => state.loadState
-    }),
+...mapState({
+  progressRate: state => state.progressRate,
+  loadState: state => state.loadState
+}),
 ```
 3.　`progressRate` に読み込み率が自動的に代入されるので、読み込み率を利用したアニメーション等を実装する時は、これを利用する。  
 
