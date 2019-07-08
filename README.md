@@ -25,6 +25,27 @@ import { mapState } from 'vuex'
   loadState: state => state.loadState
 }),
 ```
+3.　非同期処理群を`src/store.js`の`action`にて、`initLoading`を用意しているので、
+下記の様にpromsArrの中に記述していく。
+```
+const promsArr = [
+  // Promiseを返り値にもつ非同期処理を記載する
+  sampleProc(1000),
+  sampleProc(3000),
+  sampleProc(5000),
+  sampleProc(2000),
+  sampleProc(6500),
+  sampleProc(1500)
+]
+```
+4.　Promiseの記述は下記の様にPromiseをreturnすることを想定。
+```
+return new Promise(resolve => {
+  // 処理内容
+  resolve()
+})
+```
+
 
 ### Vuexのstate
 `progressRate` ：読み込み率が自動的に代入されます。  
