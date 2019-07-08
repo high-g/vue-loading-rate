@@ -32,7 +32,7 @@ export default new Vuex.Store({
      * @param commit
      * @returns {Promise<*>}
      */
-    async initLoading({ commit }) {
+    initLoading({ commit }) {
       const promsArr = [
         // Promiseを返り値にもつ非同期処理を記載する
         sampleProc(1000),
